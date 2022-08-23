@@ -6,16 +6,89 @@ body * {
     box-sizing: border-box;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     word-break: break-all;
-}
 
+}
+body {
+    background-color: rgb(12, 10, 10);
+}
 img {
     width: 100%;
     object-fit: cover;
 }
 
-.portfolio-contaner {
+/* .portfolio-contaner {
     padding: 40px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
+} */
+
+.section-title h1 {
+    color: white;
+}
+
+.portfolio-nav {
+    margin: 0 auto;
+    margin-bottom: 40px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.portfolio-nav ul {
+    margin: 0 auto;
+    float:  none;
+    text-align: center;
+}
+
+.portfolio-nav ul li {
+    display: inline-block;
+    margin: 0 10px;
+    cursor: pointer;
+    color: white;
+    font-family:Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.portfolio-nav ul li:hover {
+    color: #0bceaf;
+}
+
+.portfolio-nav ul li.active{
+    color: #0bceaf;
+}
+
+.portfolio-nav ul li span {
+     padding: 15px 0;
+    border-bottom: 2px solid transparent;
+}
+
+.portfolio-nav ul li.current span {
+    padding: 15px 0;
+    border-bottom: 2px solid #0bceaf;
+}
+
+.grid-item figure {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.grid-item figure img {
+    position: relative;
+    width: 100%;
+    display: block;
+}
+
+.grid-item figure figcaption {
+    position: absolute;
+    padding: 15px;
+    height: 100%;
+    width: 100%;
+    top: auto;
+    left: 0;
+    color: white;
+    bottom: 0;
+    z-index: 10;
+    transition: 0.5s;
+    background-color: transparent;
+    filter: contrast(5%);
 }
