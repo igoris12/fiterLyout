@@ -23,6 +23,12 @@ img {
     gap: 40px;
 } */
 
+.title {
+    background-color: #0bceaf;
+    padding: 5px;
+    border-radius: 8px 8px 8px 0px;
+}
+
 .section-title h1 {
     color: white;
 }
@@ -90,5 +96,52 @@ img {
     z-index: 10;
     transition: 0.5s;
     background-color: transparent;
-    filter: contrast(5%);
+}
+
+.grid-item figure figcaption::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.4s ease-out;
+    transform: translateX(0) translateY(0) rotateZ(0) rotate(0deg) scale(0.95);
+    z-index: 1;
+}
+
+figcaption .title {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    left: 0;
+    right: 0;
+    font-size: 18px;
+    line-height: 38px;
+    text-transform: capitalize;
+    top: 50%;
+    margin-top: 30px;
+    transform: translateX(80px) translateY(0) rotateZ(0) rotate(0deg) scale(1);
+    transition: all 0.4s ease-out;
+    opacity: 0;
+    letter-spacing: 0px;
+}
+
+figcaption .sub-title {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    left: 0;
+    font-size: 13px;
+    top: 50%;
+    margin-top: 30px;
+    transform: translateX(-70px) translateY(0) rotateZ(0) rotate(0deg) scale(1);
+    transition: 0.5s;
+    opacity: 0;
+    letter-spacing: 0px;
+
 }
