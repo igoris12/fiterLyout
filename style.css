@@ -145,3 +145,31 @@ figcaption .sub-title {
     letter-spacing: 0px;
 
 }
+
+.grid-item figure:hover {
+    transform: all 0.4s ease-out;
+}
+
+figure:hover  figcaption{
+     color: white;
+     background: rgba(11,206,175,0.9);
+}
+
+.grid-item figure:hover figcaption:after {
+    opacity: 1;
+    transform: translateX(0) translateY(0) rotateZ(0) rotate(0deg) scale(1);
+    transform: all 0.4s ease-out;
+}
+
+.grid-item figure:hover .title {
+    opacity: 1;
+    transform: translateX(0) translateY(0) rotateZ(0) rotate(0deg) scale(1);
+    transform: all 0.4s ease-out;
+    margin-top: -10px;
+} 
+
+.grid-item figure:hover .sub-title {
+    opacity: 1;
+    transform: translateX(0) translateY(0) rotateZ(0) rotate(0deg) scale(1);
+    transform: all 0.6s ease-out;
+}
