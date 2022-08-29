@@ -42,8 +42,8 @@
                     </div>
 
                     <div class="portfolio-gallery col-12">
-                        <div class="portfolio-contaner row">
-                            <div class="grid-item col-4 user-interface">
+                        <div class="portfolio-contaner ">
+                            <div class="grid-item  user-interface">
                                 <figure>
                                     <img src="/imagis/g1.png" alt="">
                                     <figcaption class="figure-caption">
@@ -55,7 +55,7 @@
                                     </figcaption>
                                 </figure>
                             </div>
-                            <div class="grid-item col-md-4 ui mockup">
+                            <div class="grid-item  ui mockup">
                                 <figure>
                                     <img src="/imagis/g2.png" alt="">
                                     <figcaption class="figure-caption">
@@ -67,7 +67,7 @@
                                     </figcaption>
                                 </figure>
                             </div>
-                            <div class="grid-item col-md-4 user-interface">
+                            <div class="grid-item  user-interface">
                                 <figure>
                                     <img src="/imagis/g3.png" alt="">
                                     <figcaption class="figure-caption">
@@ -79,7 +79,7 @@
                                     </figcaption>
                                 </figure>
                             </div>
-                            <div class="grid-item col-md-4 branding">
+                            <div class="grid-item  branding">
                                 <figure>
                                     <img src="/imagis/g4.png" alt="">
                                     <figcaption class="figure-caption">
@@ -91,7 +91,7 @@
                                     </figcaption>
                                 </figure>
                             </div>
-                            <div class="grid-item col-md-4 user-interface">
+                            <div class="grid-item  user-interface">
                                 <figure>
                                     <img src="/imagis/g5.png" alt="">
                                     <figcaption class="figure-caption">
@@ -103,7 +103,7 @@
                                     </figcaption>
                                 </figure>
                             </div>
-                            <div class="grid-item col-md-4 branding">
+                            <div class="grid-item  branding">
                                 <figure>
                                     <img src="/imagis/g6.png" alt="">
                                     <figcaption class="figure-caption">
@@ -116,7 +116,7 @@
                                 </figure>
                             </div>
 
-                            <div class="grid-item col-md-4 ui">
+                            <div class="grid-item  ui">
                                 <figure>
                                     <img src="/imagis/g3.png" alt="">
                                     <figcaption class="figure-caption">
@@ -128,7 +128,7 @@
                                     </figcaption>
                                 </figure>
                             </div>
-                            <div class="grid-item col-md-4 branding">
+                            <div class="grid-item  branding">
                                 <figure>
                                     <img src="/imagis/g1.png" alt="">
                                     <figcaption class="figure-caption">
@@ -150,9 +150,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
 <script>
     $(document).ready(function () {
+        let $container = $('.portfolio-contaner');
 
         $(window).on('load', function () {
-            let $container = $('.portfolio-contaner');
             $container.isotope({
                 filter: '*',
                 animationOptions: {
@@ -163,7 +163,16 @@
         $('.portfolio-nav li').click(function () {
             $('.portfolio-nav .current').removeClass('current');
             $(this).addClass('current');
+            let selector = $(this).attr('data-filter');
+            $container.isotope({
+                filter: selector,
+                animationOptions: {
+                    queue: true
+                }
+            })
+            return false;
         })
+
     });
 </script>
 

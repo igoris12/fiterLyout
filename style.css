@@ -173,3 +173,8 @@ figure:hover  figcaption{
     transform: translateX(0) translateY(0) rotateZ(0) rotate(0deg) scale(1);
     transform: all 0.6s ease-out;
 }
+
+.portfolio-contaner {
+    display: grid;
+grid-template-columns: repeat(3, 1fr) !important;
+}
