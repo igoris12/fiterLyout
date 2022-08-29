@@ -26,8 +26,8 @@
                             <li data-filter="*" class="current">
                                 <span>All Categories</span>
                             </li>
-                            <li data-filter=".user-interface" class="current">
-                                <span></span>Web Desing
+                            <li data-filter=".user-interface">
+                                <span>Web Desing</span>
                             </li>
                             <li data-filter=".branding">
                                 <span>Branding</span>
@@ -152,9 +152,18 @@
     $(document).ready(function () {
 
         $(window).on('load', function () {
-            let $container = $('.container');
-            console.log($container);
+            let $container = $('.portfolio-contaner');
+            $container.isotope({
+                filter: '*',
+                animationOptions: {
+                    queue: true
+                }
+            })
         });
+        $('.portfolio-nav li').click(function () {
+            $('.portfolio-nav .current').removeClass('current');
+            $(this).addClass('current');
+        })
     });
 </script>
 
