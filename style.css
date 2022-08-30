@@ -13,15 +13,9 @@ body {
 }
 img {
     width: 100%;
+    height: 250px;
     object-fit: cover;
 }
-
-/* .portfolio-contaner {
-    padding: 40px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-} */
 
 .title {
     background-color: #0bceaf;
@@ -176,5 +170,11 @@ figure:hover  figcaption{
 
 .portfolio-contaner {
     display: grid;
-grid-template-columns: repeat(3, 1fr) !important;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.portfolio-contaner  .grid-item{
+    width: 250px;
+    height: 250px;
 }
